@@ -12,6 +12,7 @@ apt-get install -y --no-install-recommends \
   libboost-python-dev \
   libboost-system-dev \
   libboost-thread-dev \
+  libboost-regex-dev \
   libgflags-dev \
   libgoogle-glog-dev \
   libhdf5-serial-dev \
@@ -104,7 +105,7 @@ if $WITH_CUDA ; then
   ln -s /usr/local/cuda-$CUDA_VERSION /usr/local/cuda
 
   if $WITH_CUDNN ; then
-    apt-get install -y --no-install-recommends libcudnn5-dev
+    apt-get install -y --no-install-recommends libcudnn6-dev
   fi
 fi
 
